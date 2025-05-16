@@ -1,0 +1,22 @@
+{
+    "refbox": {
+      "ip": "127.0.0.1",
+      "port": 28097
+    },
+    "robots": [
+      {"id": 1, "name": "Player", "color": "blue", "ip": "127.0.0.1", "send_to_port": 5000, "base_listen_port": 54836, "initial_pos": [2, 4], "initial_orient": 0},
+      {"id": 2, "name": "Player", "color": "blue", "ip": "192.168.1.102", "send_to_port": 5000, "base_listen_port": 6002, "initial_pos": [3, 2], "initial_orient": 45},
+      {"id": 3, "name": "Player", "color": "blue", "ip": "192.168.1.103", "send_to_port": 5000, "base_listen_port": 6003, "initial_pos": [4, 6], "initial_orient": 90},
+      {"id": 4, "name": "Player", "color": "blue", "ip": "192.168.1.104", "send_to_port": 5000, "base_listen_port": 6004, "initial_pos": [2, 7], "initial_orient": 135},
+      {"id": 5, "name": "Player", "color": "blue", "ip": "192.168.1.105", "send_to_port": 5000, "base_listen_port": 6005, "initial_pos": [1, 1], "initial_orient": 270}
+    ],
+    "opponents": [
+      {"id": 1, "name": "Opponent", "color": "red", "initial_pos": [8, 4], "initial_orient": 180},
+      {"id": 2, "name": "Opponent", "color": "red", "initial_pos": [9, 2], "initial_orient": 220},
+      {"id": 3, "name": "Opponent", "color": "red", "initial_pos": [10, 6], "initial_orient": 45},
+      {"id": 4, "name": "Opponent", "color": "red", "initial_pos": [8, 7], "initial_orient": 315},
+      {"id": 5, "name": "Opponent", "color": "red", "initial_pos": [10, 3], "initial_orient": 90}
+    ],
+    "field_dimensions": [22, 14],
+    "local_map_view_range_m": 6
+  }

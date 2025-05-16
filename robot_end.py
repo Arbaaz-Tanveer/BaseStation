@@ -16,9 +16,9 @@ class ActualRobot:
         print(f"Robot listening on {self.robot_ip}:{self.robot_port}")
         
         # Initialize robot state
-        self.position = (0, 0)  # (x, y) in meters
-        self.orientation = 0    # in degrees, 0 = east
-        self.ball_position = None  # (x, y) if detected
+        self.position = (5, 2, 1)  # (x, y, theta) in meters and radians
+        self.ball_position = (0,0)  # Fixed for simulation
+
         self.obstacles = []     # List of (x, y) positions
         
         # Start sensor simulation thread
@@ -35,7 +35,8 @@ class ActualRobot:
         """Simulate sensor updates every second."""
         while True:
             # Simulate detecting a ball and obstacles
-            self.ball_position = (6, 4.5)  # Fixed for simulation
+            # self.ball_position = (6, 4.5)  # Fixed for simulation
+            self.ball_position = (self.ball_position[0] + 0.1,0)  # Simulate movement
             self.obstacles = [(2, 3), (4, 5)]  # Example obstacles
             time.sleep(1)
 
@@ -44,7 +45,6 @@ class ActualRobot:
         while True:
             status = {
                 "position": self.position,
-                "orientation": self.orientation,
                 "ball_position": self.ball_position,
                 "obstacles": self.obstacles
             }
