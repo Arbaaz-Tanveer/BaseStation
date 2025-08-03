@@ -36,9 +36,9 @@ class Robot:
             data_dict = json.loads(data_str)
             
             # Update robot's own pose (position and orientation)
-            if 'position' in data_dict and len(data_dict['position']) == 3:
+            if 'position' in data_dict and len(data_dict['position']) == 2 and 'orientation' in data_dict:
                 self.position = [data_dict['position'][0], data_dict['position'][1]]
-                self.orientation = data_dict['position'][2] # theta
+                self.orientation = data_dict['orientation'] # theta
             
             # Update ball position as seen by this robot (assumed global)
             if 'ball_position' in data_dict and data_dict['ball_position'] is not None:

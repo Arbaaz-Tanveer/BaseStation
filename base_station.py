@@ -101,7 +101,7 @@ class BaseStationLogic:
         #    This is now also handled by update_robot_ui_elements which calls refresh_robot_detail_view
 
         # Keep scheduling next update
-        self.ui.root.after(200, self.update_world_state_and_ui) # Update rate (e.g., 200ms for 5 FPS)
+        self.ui.root.after(30, self.update_world_state_and_ui) # Update rate (e.g., 200ms for 5 FPS)
 
     # parse_message seems unused or was a placeholder
     # def parse_message(self, message):
@@ -125,7 +125,7 @@ def main():
     # Start the periodic update loop
     logic.update_world_state_and_ui() 
     
-    root.mainloop()
+    root.mainloop()  
 
     # Cleanup on exit
     print("Closing application. Disconnecting services...")
